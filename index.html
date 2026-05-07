@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Xavales 00 "” Reaccionadores</title>
+  <link rel="icon" type="image/jpeg" href="channels4_profile.jpg" />
+  <link rel="apple-touch-icon" href="channels4_profile.jpg" />
+  <meta name="description"
+    content="Web oficial de Los Xavales 00, los reaccionadores más grandes de la escena urbana española. Episodios, integrantes y más." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash" class="splash">
+    <canvas id="splash-particles"></canvas>
+    <div class="splash-content">
+      <div class="splash-logo-wrap">
+        <img id="splash-logo" src="channels4_profile.jpg" alt="Los Xavales 00 Logo" class="splash-logo" />
+        <div class="splash-glow-ring"></div>
+      </div>
+      <div class="splash-loader" id="splash-loader">
+        <div class="loader-bar-wrap">
+          <div class="loader-bar" id="loader-bar"></div>
+        </div>
+        <span class="loader-text" id="loader-text">CARGANDO...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW VIDEO BANNER -->
+  <div id="new-video-banner" class="new-video-banner hidden">
+    <span class="banner-dot"></span>
+    <span class="banner-text">ðŸ”´ NUEVO EPISODIO DISPONIBLE "” <a id="new-video-link" href="#" target="_blank">VER
+        AHORA</a></span>
+    <button class="banner-close"
+      onclick="document.getElementById('new-video-banner').classList.add('hidden')">âœ•</button>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo-wrap" id="nav-logo-link">
+        <img src="channels4_profile.jpg" alt="Logo" class="nav-logo" id="nav-logo" />
+        <span class="nav-brand">LOS XAVALES <span class="brand-accent">00</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#episodios" class="nav-link" data-label="EPISODIOS">EPISODIOS</a></li>
+        <li><a href="#integrantes" class="nav-link" data-label="INTEGRANTES">INTEGRANTES</a></li>
+        <li><a href="#contacto" class="nav-link" data-label="CONTACTO">CONTACTO</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="site-hidden">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <canvas id="hero-particles"></canvas>
+      <div class="hero-content">
+        <div class="hero-brand-row reveal">
+          <span class="hero-powered">Powered by <img src="burn/burn.png" alt="Burn" class="hero-burn-logo" /></span>
+        </div>
+        <p class="hero-eyebrow reveal">DESDE VALENCIA — PARA EL MUNDO</p>
+        <h1 class="hero-title reveal">LOS XAVALES 00</h1>
+        <p class="hero-sub reveal">Los reaccionadores de la escena urbana española</p>
+        <div class="hero-cta reveal">
+          <a href="#episodios" class="btn btn-primary">▶ ÚLTIMOS EPISODIOS</a>
+          <a href="https://www.youtube.com/@LosXavales" target="_blank" class="btn btn-outline">SUSCRÍBETE</a>
+        </div>
+        <!-- ÚLTIMO VÍDEO: thumbnail clicable -->
+        <div class="hero-latest reveal" id="hero-latest">
+          <div class="hero-latest-inner" id="hero-latest-inner">
+            <div class="hero-latest-placeholder">⏳ Cargando último vídeo...</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hero-scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- EPISODIOS -->
+    <section id="episodios" class="section episodios-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">CONTENIDO</span>
+          <h2 class="section-title">ÚLTIMOS <span class="accent">EPISODIOS</span></h2>
+          <p class="section-desc">Los mejores reacciones de la escena, cada semana</p>
+        </div>
+        <div class="episodes-grid" id="episodes-grid">
+          <!-- Populated by JS -->
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+          <div class="episode-skeleton"></div>
+        </div>
+        <div class="episodes-cta reveal">
+          <a href="https://www.youtube.com/@LosXavales" target="_blank" class="btn btn-outline">VER TODOS LOS EPISODIOS
+            â†’</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTEGRANTES -->
+    <section id="integrantes" class="section members-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">EL EQUIPO</span>
+          <h2 class="section-title">LOS <span class="accent">INTEGRANTES</span></h2>
+          <p class="section-desc">Los cuatro pilares de Los Xavales 00</p>
+        </div>
+        <div class="members-grid">
+
+          <div class="member-card reveal" id="card-tuty" data-audio="assets/audio/tuty.mp3">
+            <div class="member-avatar">
+              <img src="integrantes/tuti.PNG" alt="Tuty" class="member-photo" />
+              <div class="member-overlay">
+                <div class="overlay-noise"></div>
+                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">@tutii_19</h3>
+              <p class="member-role">Integrante</p>
+              <div class="member-socials">
+                <a href="https://www.instagram.com/tutii_19/" target="_blank" class="social-btn ig" aria-label="Instagram Tuty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="https://x.com/losxavales00" target="_blank" class="social-btn xtwitter" aria-label="X Tuty"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <div class="member-card reveal" id="card-nene" data-audio="assets/audio/elnene.mp3">
+            <div class="member-avatar">
+              <img src="integrantes/nine.PNG" alt="El Nene" class="member-photo" />
+              <div class="member-overlay">
+                <div class="overlay-noise"></div>
+                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">@elnineeeeeeeee</h3>
+              <p class="member-role">Integrante</p>
+              <div class="member-socials">
+                <a href="https://www.instagram.com/elnineeeeeeeee/" target="_blank" class="social-btn ig" aria-label="Instagram El Nene"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="https://x.com/elnineeeeeeeee" target="_blank" class="social-btn xtwitter" aria-label="X El Nene"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.youtube.com/@ElNineeeeeeeee" target="_blank" class="social-btn yt" aria-label="YouTube El Nene"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <div class="member-card reveal" id="card-quillo" data-audio="assets/audio/quillo.mp3">
+            <div class="member-avatar">
+              <img src="integrantes/Quillo.PNG" alt="Quillo Ración" class="member-photo" />
+              <div class="member-overlay">
+                <div class="overlay-noise"></div>
+                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">@quilloreaccion</h3>
+              <p class="member-role">Integrante</p>
+              <div class="member-socials">
+                <a href="https://www.instagram.com/quilloreaccion/" target="_blank" class="social-btn ig" aria-label="Instagram Quillo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="https://x.com/quilloreaccion" target="_blank" class="social-btn xtwitter" aria-label="X Quillo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.youtube.com/@QuilloReaccion" target="_blank" class="social-btn yt" aria-label="YouTube Quillo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+          <div class="member-card reveal" id="card-lucia" data-audio="assets/audio/lucia.mp3">
+            <div class="member-avatar">
+              <img src="integrantes/lucia.PNG" alt="Lucía Alonso" class="member-photo" />
+              <div class="member-overlay">
+                <div class="overlay-noise"></div>
+                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+              </div>
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">@luciaaalonso___</h3>
+              <p class="member-role">Integrante</p>
+              <div class="member-socials">
+                <a href="https://www.instagram.com/luciaaalonso___/" target="_blank" class="social-btn ig" aria-label="Instagram Lucía"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="https://x.com/luciaaalonso___" target="_blank" class="social-btn xtwitter" aria-label="X Lucía"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="https://www.youtube.com/@luciaaalonso" target="_blank" class="social-btn yt" aria-label="YouTube Lucía"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+              </div>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- CONTACTO / BOOKING -->
+    <section id="contacto" class="section contact-section">
+      <div class="contact-noise"></div>
+      <div class="container">
+        <div class="contact-inner reveal">
+          <span class="section-tag">MANAGEMENT</span>
+          <h2 class="contact-title">¿TRABAJAMOS<br><span class="accent">JUNTOS?</span></h2>
+          <p class="contact-desc">Colaboraciones, patrocinios, eventos y cualquier propuesta<br>pasan por aquí. Te respondemos.</p>
+          <a href="mailto:management@losxavales.com" class="contact-btn">
+            <span class="contact-btn-icon">✉</span>
+            management@losxavales.com
+          </a>
+          <p class="contact-hint">O encuéntranos en redes como <strong>@losxavales00</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-logo-wrap">
+          <img src="channels4_profile.jpg" alt="Los Xavales 00" class="footer-logo" />
+          <span class="footer-brand">LOS XAVALES 00</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/losxavales00/" target="_blank" class="footer-social">Instagram</a>
+          <a href="https://www.youtube.com/@LosXavales" target="_blank" class="footer-social">YouTube</a>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2024 Los Xavales 00. Todos los derechos reservados.</p>
+          <p class="footer-powered">Powered by <img src="burn/burn.png" alt="Burn" class="footer-burn-logo" /></p>
+        </div>
+      </div>
+      <div class="footer-glow"></div>
+    </footer>
+
+  </main>
+
+  <!-- MINI PLAYER (preparado, se activa con audio) -->
+  <div id="mini-player" class="mini-player hidden">
+    <div class="player-cover">
+      <img id="player-cover-img" src="channels4_profile.jpg" alt="Cover" />
+    </div>
+    <div class="player-info">
+      <span id="player-title" class="player-title">"”</span>
+      <span id="player-artist" class="player-artist">Los Xavales 00</span>
+    </div>
+    <div class="player-controls">
+      <button id="player-play" class="player-btn" aria-label="Play/Pause">▶</button>
+    </div>
+    <div class="player-progress">
+      <div id="player-bar" class="player-bar"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
