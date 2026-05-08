@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Los Xavales 00 "” Reaccionadores</title>
+  <title>Los Xavales 00 - Reaccionadores</title>
   <link rel="icon" type="image/jpeg" href="channels4_profile.jpg" />
   <link rel="apple-touch-icon" href="channels4_profile.jpg" />
   <meta name="description"
@@ -15,6 +15,13 @@
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Fix mojibake and improve mobile nav stacking -->
+  <style>
+    @media (max-width: 768px) {
+      /* Ensure the navbar stays above content on small screens */
+      #navbar { position: sticky; top: 0; z-index: 1000; }
+    }
+  </style>
 </head>
 
 <body>
@@ -39,10 +46,8 @@
   <!-- NEW VIDEO BANNER -->
   <div id="new-video-banner" class="new-video-banner hidden">
     <span class="banner-dot"></span>
-    <span class="banner-text">ðŸ”´ NUEVO EPISODIO DISPONIBLE "” <a id="new-video-link" href="#" target="_blank">VER
-        AHORA</a></span>
-    <button class="banner-close"
-      onclick="document.getElementById('new-video-banner').classList.add('hidden')">âœ•</button>
+    <span class="banner-text">NUEVO EPISODIO DISPONIBLE <a id="new-video-link" href="#" target="_blank">VER AHORA</a></span>
+    <button class="banner-close" onclick="document.getElementById('new-video-banner').classList.add('hidden')">✖</button>
   </div>
 
   <!-- NAVBAR -->
@@ -100,7 +105,7 @@
         <div class="section-header reveal">
           <span class="section-tag">CONTENIDO</span>
           <h2 class="section-title">ÚLTIMOS <span class="accent">EPISODIOS</span></h2>
-          <p class="section-desc">Los mejores reacciones de la escena, cada semana</p>
+          <p class="section-desc">Las reacciones de la escena, cada semana</p>
         </div>
         <div class="episodes-grid" id="episodes-grid">
           <!-- Populated by JS -->
@@ -113,9 +118,8 @@
           <div class="episode-skeleton"></div>
           <div class="episode-skeleton"></div>
         </div>
-        <div class="episodes-cta reveal">
-          <a href="https://www.youtube.com/@LosXavales" target="_blank" class="btn btn-outline">VER TODOS LOS EPISODIOS
-            â†’</a>
+          <div class="episodes-cta reveal">
+          <a href="https://www.youtube.com/@LosXavales" target="_blank" class="btn btn-outline">VER TODOS LOS EPISODIOS →</a>
         </div>
       </div>
     </section>
@@ -135,7 +139,7 @@
               <img src="integrantes/tuti.PNG" alt="Tuty" class="member-photo" />
               <div class="member-overlay">
                 <div class="overlay-noise"></div>
-                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+                <span class="overlay-playing">♪ REPRODUCIENDO</span>
               </div>
             </div>
             <div class="member-info">
@@ -154,7 +158,7 @@
               <img src="integrantes/nine.PNG" alt="El Nene" class="member-photo" />
               <div class="member-overlay">
                 <div class="overlay-noise"></div>
-                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+                <span class="overlay-playing">♪ REPRODUCIENDO</span>
               </div>
             </div>
             <div class="member-info">
@@ -174,7 +178,7 @@
               <img src="integrantes/Quillo.PNG" alt="Quillo Ración" class="member-photo" />
               <div class="member-overlay">
                 <div class="overlay-noise"></div>
-                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+                <span class="overlay-playing">♪ REPRODUCIENDO</span>
               </div>
             </div>
             <div class="member-info">
@@ -194,7 +198,7 @@
               <img src="integrantes/lucia.PNG" alt="Lucía Alonso" class="member-photo" />
               <div class="member-overlay">
                 <div class="overlay-noise"></div>
-                <span class="overlay-playing">â™ª REPRODUCIENDO</span>
+                <span class="overlay-playing">♪ REPRODUCIENDO</span>
               </div>
             </div>
             <div class="member-info">
@@ -242,7 +246,7 @@
           <a href="https://www.youtube.com/@LosXavales" target="_blank" class="footer-social">YouTube</a>
         </div>
         <div class="footer-bottom">
-          <p class="footer-copy">© 2024 Los Xavales 00. Todos los derechos reservados.</p>
+          <p class="footer-copy">Los Xavales 00.</p>
           <p class="footer-powered">Powered by <img src="burn/burn.png" alt="Burn" class="footer-burn-logo" /></p>
         </div>
       </div>
@@ -257,7 +261,7 @@
       <img id="player-cover-img" src="channels4_profile.jpg" alt="Cover" />
     </div>
     <div class="player-info">
-      <span id="player-title" class="player-title">"”</span>
+      <span id="player-title" class="player-title"></span>
       <span id="player-artist" class="player-artist">Los Xavales 00</span>
     </div>
     <div class="player-controls">
